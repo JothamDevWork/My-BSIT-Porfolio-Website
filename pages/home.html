@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>As BSIT Student</title>
+    <link rel="icon" href="../images/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700&family=Rajdhani:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/home.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <canvas id="matrix-canvas"></canvas>
+    <div class="blur-overlay"></div>
+    <div class="scanlines"></div>
+
+    <nav id="mainNav">
+      <a class="nav-logo" href="#home">
+        <img src="../images/logo.png" alt="Logo" class="nav-logo-img" />
+        <span>//</span>TAM<span>SKI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#opportunities">Opportunities</a></li>
+        <li><a href="#struggles">Struggles</a></li>
+        <li><a href="#testimonial">Testimonial</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <div class="scroll-hint" id="scrollHint">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+
+    <div id="content">
+      <!-- HOME -->
+      <div id="home" class="section-panel">
+        <section class="hero">
+          <div class="hero-left">
+            <div class="hero-badge reveal from-up" style="--i: 0">
+              Ready to Innovate
+            </div>
+            <div class="hero-title">
+              <span class="line1 reveal from-left" style="--i: 1">BSIT</span>
+              <span
+                class="line2 glitch reveal from-left"
+                data-text="Student"
+                style="--i: 2"
+                >Student</span
+              >
+            </div>
+            <p class="hero-sub reveal from-up" style="--i: 3">
+              <span id="typed-sub"></span><span class="cursor-blink"></span>
+            </p>
+            <p class="hero-desc reveal from-left" style="--i: 4">
+              Building innovative, functional, and user-friendly digital
+              experiences — one line of code at a time.
+            </p>
+            <div class="hero-tags reveal from-up" style="--i: 5">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JavaScript</span><span class="tag">Python</span>
+              <span class="tag">MySQL</span><span class="tag">Networking</span>
+            </div>
+            <div class="hero-btns reveal from-up" style="--i: 6">
+              <a href="../pages/portfolio.html" class="btn-primary"
+                >View Projects ›</a
+              >
+              <a href="#contact" class="btn-secondary">Contact Me ›</a>
+            </div>
+            <div class="hero-socials reveal from-up" style="--i: 7">
+              <a href="#" class="social-link" data-label="GitHub">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" data-label="LinkedIn">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" data-label="Instagram">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" data-label="TikTok">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.2 8.2 0 004.79 1.53V6.82a4.85 4.85 0 01-1.02-.13z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-right reveal from-right" style="--i: 2">
+            <div class="terminal-wrap">
+              <div class="terminal">
+                <div class="terminal-bar">
+                  <div class="t-dot red"></div>
+                  <div class="t-dot yel"></div>
+                  <div class="t-dot grn"></div>
+                  <span class="t-title">root@portfolio:~</span>
+                </div>
+                <div class="terminal-body">
+                  <img
+                    src="../images/logo.png"
+                    alt=""
+                    class="terminal-bg-img"
+                    aria-hidden="true"
+                  />
+                  <div class="terminal-text" id="terminalBody"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about" class="section-panel">
+        <section class="about-section">
+          <div class="about-header reveal from-up">
+            <div class="section-label">About</div>
+            <h2 class="about-title">About <span>Me</span></h2>
+            <p class="about-tag">Transforming ideas into digital experiences</p>
+          </div>
+          <div class="about-grid">
+            <div class="about-left reveal from-left">
+              <h3
+                style="color: rgba(255, 255, 255, 0.7); font-family: var(--raj)"
+              >
+                Hello, I'm
+              </h3>
+              <h1 class="about-name glitch" data-text="Jotham Den M. Baquiran">
+                Jotham Den M. Baquiran
+              </h1>
+              <p class="about-desc">
+                I am a Bachelor of Science in Information Technology student
+                with a passion for building purposeful digital solutions. I
+                thrive at the intersection of design and engineering — crafting
+                interfaces that are both beautiful and robust.
+              </p>
+              <div class="about-buttons">
+                <a class="btn-primary" href="#">Download CV</a>
+                <a href="portfolio.html" class="btn-secondary">View Projects</a>
+              </div>
+            </div>
+            <div class="about-right reveal from-right">
+              <div class="about-avatar"></div>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="about-card reveal from-left" style="--i: 0">
+              <h3>11</h3>
+              <p>Total Projects</p>
+            </div>
+            <div class="about-card reveal from-up" style="--i: 1">
+              <h3>7</h3>
+              <p>Certificates</p>
+            </div>
+            <div class="about-card reveal from-right" style="--i: 2">
+              <h3>3</h3>
+              <p>Years Experience</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- EXPERIENCES -->
+      <div id="experiences" class="section-panel">
+        <section class="page-section exp-container">
+          <div class="exp-left reveal from-left">
+            <div class="section-label" style="margin-bottom: 0.4rem">
+              Experience
+            </div>
+            <h2 class="exp-main-title"><span>MY</span> JOURNEY</h2>
+            <div class="exp-img-wrapper">
+              <img
+                id="imgA"
+                class="exp-img active"
+                src="../images/exp1-1.jpg"
+                alt="Experience 1"
+              />
+              <img id="imgB" class="exp-img" alt="Experience" />
+            </div>
+            <button class="btn-primary exp-btn" onclick="nextExperience()">
+              Next →
+            </button>
+          </div>
+          <div class="exp-right reveal from-right">
+            <div class="exp-static">
+              <h3>WHY I CHOSE CSU CARIG</h3>
+              <p>
+                I chose CSU Carig Campus because pursuing a Bachelor of Science
+                in Information Technology has always been my passion. It is the
+                only school in my area that offers this program, making it the
+                best opportunity for me to follow my goals. I believe this
+                institution provides the foundation, knowledge, and environment
+                I need to grow and succeed in the field of technology.
+              </p>
+            </div>
+            <div class="section-divider reveal from-scale"></div>
+            <div class="exp-dynamic">
+              <h3 id="expTitle">MY FRESHMAN JOURNEY</h3>
+              <p id="expText">
+                My first year as a BSIT student was full of adjustments and new
+                experiences. I was introduced to the fundamentals of
+                programming, basic computer operations, and different areas of
+                information technology. At first, everything felt overwhelming,
+                especially learning how to code and understand technical
+                concepts. However, as time passed, I slowly developed confidence
+                and started enjoying the process of solving problems. This year
+                built my foundation and helped me realize that I am on the right
+                path.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ACHIEVEMENTS -->
+      <div id="achievements" class="section-panel">
+        <section style="width: 100%; display: flex; justify-content: center">
+          <div class="earn-container">
+            <div class="earn-left reveal from-left">
+              <div class="card-stack">
+                <img
+                  src="../images/ach1.png"
+                  class="card"
+                  id="earnCard0"
+                  alt="Achievement"
+                />
+                <img
+                  src="../images/ach2.jpg"
+                  class="card"
+                  id="earnCard1"
+                  alt="Achievement"
+                />
+                <img
+                  src="../images/ach3.jpg"
+                  class="card active"
+                  id="earnCard2"
+                  alt="Achievement"
+                />
+              </div>
+            </div>
+            <div class="earn-right reveal from-right">
+              <div class="section-label">Achievements</div>
+              <h2 class="section-heading">What I've <span>Earned</span></h2>
+              <div class="section-divider reveal from-scale"></div>
+              <div class="earn-controls">
+                <button onclick="prevEarn()" title="Previous">▲</button>
+                <button onclick="nextEarn()" title="Next">▼</button>
+              </div>
+              <h3 id="earnTitle">Best Project Award</h3>
+              <p id="earnText">
+                Received recognition for developing a fully functional web
+                system that improved efficiency and user experience.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- OPPORTUNITIES -->
+      <div id="opportunities" class="section-panel">
+        <section class="opp-section">
+          <div class="opp-header">
+            <div class="section-label reveal from-up">Opportunities</div>
+            <h2 class="section-heading reveal from-left">
+              Open <span>Doors</span>
+            </h2>
+            <div class="section-divider reveal from-scale"></div>
+            <p class="section-body reveal from-up">
+              A BSIT degree unlocks pathways across the entire technology
+              landscape — from crafting interfaces to securing infrastructure.
+              Explore where the degree can take you.
+            </p>
+          </div>
+          <div class="opp-carousel-outer reveal from-up" id="oppOuter">
+            <div class="opp-track-clip">
+              <div class="opp-track" id="oppTrack">
+                <div class="opp-slide opp-featured">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op1.png"
+                      alt="Web Dev"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                    <div class="opp-aim-badge">MY AIM</div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_01 &nbsp;/&nbsp; PRIMARY_TARGET
+                    </div>
+                    <h3 class="opp-slide-title">Web Development</h3>
+                    <p class="opp-slide-sub">
+                      &gt; status: actively_pursuing.exe
+                    </p>
+                    <p class="opp-slide-desc">
+                      The field I am building toward — designing and engineering
+                      full-stack web experiences that are fast, accessible, and
+                      beautiful.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Frontend / UI Developer</span
+                      ><span class="opp-role">Full-Stack Engineer</span
+                      ><span class="opp-role">Web App Developer</span
+                      ><span class="opp-role">Freelance Web Developer</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">HTML &amp; CSS</span
+                      ><span class="opp-stag">JavaScript</span
+                      ><span class="opp-stag">React</span
+                      ><span class="opp-stag">MySQL</span
+                      ><span class="opp-stag">PHP</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op2.png"
+                      alt="Cybersecurity"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_02 &nbsp;/&nbsp; HIGH_DEMAND
+                    </div>
+                    <h3 class="opp-slide-title">Cybersecurity</h3>
+                    <p class="opp-slide-sub">
+                      &gt; threat_level: critical_need
+                    </p>
+                    <p class="opp-slide-desc">
+                      Every organization needs protection. BSIT students with
+                      networking knowledge can pivot into ethical hacking and
+                      security analysis.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Security Analyst</span
+                      ><span class="opp-role">Ethical Hacker / Pen Tester</span
+                      ><span class="opp-role">SOC Analyst</span
+                      ><span class="opp-role">Network Security Engineer</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">Networking</span
+                      ><span class="opp-stag">Linux</span
+                      ><span class="opp-stag">Cryptography</span
+                      ><span class="opp-stag">Firewalls</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op3.png"
+                      alt="Software Engineering"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_03 &nbsp;/&nbsp; CORE_DISCIPLINE
+                    </div>
+                    <h3 class="opp-slide-title">Software Engineering</h3>
+                    <p class="opp-slide-sub">&gt; build --target production</p>
+                    <p class="opp-slide-desc">
+                      From desktop apps to enterprise systems, software
+                      engineers design and maintain programs that power the
+                      world.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Software Developer</span
+                      ><span class="opp-role">Systems Analyst</span
+                      ><span class="opp-role">QA / Test Engineer</span
+                      ><span class="opp-role">Backend Developer</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">Python</span
+                      ><span class="opp-stag">Java</span
+                      ><span class="opp-stag">Git</span
+                      ><span class="opp-stag">Algorithms</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op4.png"
+                      alt="Data Science"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_04 &nbsp;/&nbsp; DATA_DRIVEN
+                    </div>
+                    <h3 class="opp-slide-title">
+                      Data Science &amp; Analytics
+                    </h3>
+                    <p class="opp-slide-sub">
+                      &gt; query --rows all --insight true
+                    </p>
+                    <p class="opp-slide-desc">
+                      The ability to extract meaning from data is one of the
+                      most valued skills. BSIT's database subjects form the
+                      bedrock for analytics careers.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Data Analyst</span
+                      ><span class="opp-role">Database Administrator</span
+                      ><span class="opp-role">BI Developer</span
+                      ><span class="opp-role">ML Engineer (entry)</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">MySQL</span
+                      ><span class="opp-stag">Python</span
+                      ><span class="opp-stag">Excel</span
+                      ><span class="opp-stag">Visualization</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op5.png"
+                      alt="Network Admin"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_05 &nbsp;/&nbsp; INFRASTRUCTURE
+                    </div>
+                    <h3 class="opp-slide-title">Network Administration</h3>
+                    <p class="opp-slide-sub">
+                      &gt; ping gateway --status online
+                    </p>
+                    <p class="opp-slide-desc">
+                      The backbone of every digital organization is its network.
+                      BSIT graduates can manage, configure, and troubleshoot
+                      critical systems.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Network Administrator</span
+                      ><span class="opp-role">IT Infrastructure Specialist</span
+                      ><span class="opp-role">Systems Administrator</span
+                      ><span class="opp-role">Cloud Network Engineer</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">Networking</span
+                      ><span class="opp-stag">Linux</span
+                      ><span class="opp-stag">Cisco</span
+                      ><span class="opp-stag">Cloud</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op6.png"
+                      alt="UI UX"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_06 &nbsp;/&nbsp; HUMAN_CENTERED
+                    </div>
+                    <h3 class="opp-slide-title">UI / UX Design</h3>
+                    <p class="opp-slide-sub">&gt; render --mode user_first</p>
+                    <p class="opp-slide-desc">
+                      Great technology needs great design. BSIT students who
+                      develop usability skills can pursue UI/UX roles bridging
+                      engineering and human experience.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">UI/UX Designer</span
+                      ><span class="opp-role">Product Designer</span
+                      ><span class="opp-role">Interaction Designer</span
+                      ><span class="opp-role">Prototyping Specialist</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">Figma</span
+                      ><span class="opp-stag">Wireframing</span
+                      ><span class="opp-stag">Prototyping</span
+                      ><span class="opp-stag">User Research</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="opp-slide">
+                  <div class="opp-slide-banner">
+                    <img
+                      class="opp-slide-banner-img"
+                      src="../images/op7.png"
+                      alt="Cloud"
+                    />
+                    <div class="opp-slide-banner-bg"></div>
+                  </div>
+                  <div class="opp-slide-body">
+                    <div class="opp-slide-meta">
+                      TRACK_07 &nbsp;/&nbsp; FUTURE_READY
+                    </div>
+                    <h3 class="opp-slide-title">Cloud Computing</h3>
+                    <p class="opp-slide-sub">
+                      &gt; deploy --platform cloud --scale auto
+                    </p>
+                    <p class="opp-slide-desc">
+                      The cloud is where modern infrastructure lives. BSIT
+                      graduates who learn AWS, Azure, or GCP land some of the
+                      most in-demand roles in tech.
+                    </p>
+                    <div class="opp-slide-roles">
+                      <span class="opp-role">Cloud Engineer</span
+                      ><span class="opp-role">DevOps Engineer</span
+                      ><span class="opp-role">Cloud Architect (senior)</span
+                      ><span class="opp-role">Site Reliability Engineer</span>
+                    </div>
+                    <div class="opp-slide-tags">
+                      <span class="opp-stag">AWS / Azure</span
+                      ><span class="opp-stag">Docker</span
+                      ><span class="opp-stag">Linux</span
+                      ><span class="opp-stag">DevOps</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="opp-dots" id="oppDots"></div>
+            <p class="opp-hint">
+              // HOVER TO PAUSE &nbsp;·&nbsp; DRAG TO SLIDE
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- STRUGGLES -->
+      <div id="struggles" class="section-panel">
+        <section class="struggles-section">
+          <div class="str-header">
+            <div class="section-label reveal from-up">Struggles</div>
+            <h2 class="section-heading reveal from-left">
+              The <span>Hard Parts</span>
+            </h2>
+            <div class="section-divider reveal from-scale"></div>
+            <p class="str-sub reveal from-up">
+              Subjects that tested my limits — logged like breach attempts on a
+              firewall.
+            </p>
+          </div>
+          <div class="str-tabs reveal from-up">
+            <button class="str-tab active" onclick="switchYear(0, this)">
+              <svg
+                class="str-tab-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="3" width="20" height="15" rx="2" />
+                <polyline points="8 17 8 21" />
+                <polyline points="16 17 16 21" />
+                <line x1="5" y1="21" x2="19" y2="21" />
+                <polyline
+                  points="6 8 9 11 6 14"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <line x1="12" y1="14" x2="17" y2="14" stroke-linecap="round" />
+              </svg>
+              <span>FRESHMAN</span>
+              <div class="str-tab-bar"></div>
+            </button>
+            <button class="str-tab" onclick="switchYear(1, this)">
+              <svg
+                class="str-tab-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 3C7.03 3 3 7.03 3 12c0 3.31 1.69 6.22 4.25 7.94V21h9v-1.06C18.31 18.22 21 15.31 21 12c0-4.97-4.03-9-9-9z"
+                />
+                <line x1="9" y1="17" x2="9" y2="21" />
+                <line x1="15" y1="17" x2="15" y2="21" />
+                <circle cx="9" cy="11" r="1.2" fill="currentColor" />
+                <circle cx="15" cy="11" r="1.2" fill="currentColor" />
+                <path d="M9 14.5s1 1 3 1 3-1 3-1" />
+              </svg>
+              <span>SOPHOMORE</span>
+              <div class="str-tab-bar"></div>
+            </button>
+          </div>
+          <div class="str-cards-wrapper">
+            <div class="str-cards" id="strCards">
+              <!-- FRESHMAN -->
+              <div class="str-card-group" data-year="0">
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str1.png"
+                      alt="ITC"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 1</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">ITC - Binary Computation</h3>
+                    <p class="str-card-text">
+                      Binary computation felt like learning a completely
+                      different language. Converting numbers into endless
+                      patterns of 1s and 0s constantly confused me, and even a
+                      small mistake in a single bit could completely change the
+                      result.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH
+                        <span class="str-breach-level critical">CRITICAL</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target ITC - Binary
+                          Computation</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="94"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="94"></span
+                          ><span class="str-breach-pct">94%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str2.png"
+                      alt="Art App"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 1</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">Art Appreciation</h3>
+                    <p class="str-card-text">
+                      Art appreciation challenged me in ways I didn't expect.
+                      Interpreting meanings behind paintings, styles, and
+                      symbolism often left me unsure if I was seeing the deeper
+                      message or missing the point entirely.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH <span class="str-breach-level high">HIGH</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target Art Appreciation</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="79"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="79"></span
+                          ><span class="str-breach-pct">79%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str3.png"
+                      alt="NSTP"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 1</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">
+                      National Service Training Program
+                    </h3>
+                    <p class="str-card-text">
+                      NSTP tested my discipline more than anything. Waking up
+                      early in the morning just to attend the activities felt
+                      like fighting my own system reboot every weekend.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH
+                        <span class="str-breach-level medium">MEDIUM</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target NSTP</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="62"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="62"></span
+                          ><span class="str-breach-pct">62%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SOPHOMORE -->
+              <div class="str-card-group hidden-right" data-year="1">
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str4.png"
+                      alt="IM"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 2</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">Information Management</h3>
+                    <p class="str-card-text">
+                      Information Management became difficult because our
+                      teacher rarely met with the class. Without regular
+                      discussions and guidance, understanding the lessons often
+                      felt like trying to learn the system on my own.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH
+                        <span class="str-breach-level critical">CRITICAL</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target IM</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="91"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="91"></span
+                          ><span class="str-breach-pct">91%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str5.png"
+                      alt="Networks"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 2</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">Digital Electronics</h3>
+                    <p class="str-card-text">
+                      Digital Electronics felt overwhelming because the lessons
+                      moved too fast, especially with binary computation.
+                      Quizzes and exams came quickly, and we were given an
+                      Arduino project even though we were never fully taught how
+                      to use it.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH <span class="str-breach-level high">HIGH</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target DE</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="83"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="83"></span
+                          ><span class="str-breach-pct">83%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="str-card">
+                  <div class="str-card-img-wrap">
+                    <img
+                      src="../images/str6.png"
+                      alt="P.E"
+                      class="str-card-img"
+                    />
+                    <div class="str-card-img-overlay"></div>
+                    <span class="str-card-badge">YEAR 2</span>
+                  </div>
+                  <div class="str-card-body">
+                    <h3 class="str-card-title">Physical Education</h3>
+                    <p class="str-card-text">
+                      PE was challenging for me because we had to play
+                      volleyball even though it wasn't my preferred sport.
+                      Waking up early for the class also made it harder to stay
+                      motivated and energized.
+                    </p>
+                    <div class="str-breach">
+                      <div class="str-breach-label">
+                        <span class="str-breach-icon">&#9632;</span> HARD TO
+                        BREACH <span class="str-breach-level high">HIGH</span>
+                      </div>
+                      <div class="str-breach-bar-wrap">
+                        <span class="str-breach-prompt"
+                          >&gt; breach_scan --target PE</span
+                        >
+                        <div class="str-breach-track">
+                          <div class="str-breach-fill" data-pct="76"></div>
+                        </div>
+                        <div class="str-breach-readout">
+                          <span class="str-breach-blocks" data-pct="76"></span
+                          ><span class="str-breach-pct">76%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TESTIMONIAL -->
+      <div id="testimonial" class="section-panel">
+        <section class="tl-section">
+          <div class="tl-header">
+            <div class="section-label reveal from-up">Testimonial</div>
+            <h2 class="section-heading reveal from-left">
+              My <span>BSIT</span> Story
+            </h2>
+            <div class="section-divider reveal from-scale"></div>
+            <p class="section-body reveal from-up">
+              Four perspectives on what it truly means to walk the path of a
+              Bachelor of Science in Information Technology student.
+            </p>
+          </div>
+          <div class="tl-wrapper">
+            <div class="tl-row">
+              <div class="tl-card tl-left reveal from-up">
+                <div class="tl-meta">
+                  <span class="tl-meta-icon">&#9632;</span
+                  ><span>PERSPECTIVE_01 &nbsp;/&nbsp; PROGRAM_OVERVIEW</span>
+                </div>
+                <h3 class="tl-card-title">
+                  What I Think About <span>BSIT</span>
+                </h3>
+                <p class="tl-card-sub">
+                  &gt; eval --subject "Bachelor of Science in IT"
+                </p>
+                <p class="tl-card-body">
+                  BSIT is one of the most relevant and forward-thinking programs
+                  you can take today. It bridges the gap between theoretical
+                  knowledge and real-world application — covering everything
+                  from software development to network infrastructure. What I
+                  admire most about it is how broad yet purposeful the
+                  curriculum is. Every subject feels like a building block
+                  toward becoming a complete technology professional. Choosing
+                  this program was not just an academic decision — it was a
+                  commitment to becoming someone who can shape the digital
+                  world.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">Purposeful Curriculum</span
+                  ><span class="tl-tag">Real-World Application</span
+                  ><span class="tl-tag">Broad Skillset</span
+                  ><span class="tl-tag">Tech Foundation</span>
+                </div>
+              </div>
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <span class="tl-index">01</span>
+              </div>
+              <div class="tl-empty" style="grid-column: 3"></div>
+            </div>
+            <div class="tl-row">
+              <div class="tl-empty" style="grid-column: 1"></div>
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <span class="tl-index">02</span>
+              </div>
+              <div class="tl-card tl-right reveal from-up">
+                <div class="tl-meta">
+                  <span class="tl-meta-icon">&#9632;</span
+                  ><span>PERSPECTIVE_02 &nbsp;/&nbsp; ENJOYMENT_LOG</span>
+                </div>
+                <h3 class="tl-card-title">What's <span>Fun</span> in BSIT</h3>
+                <p class="tl-card-sub">
+                  &gt; query --filter "enjoyable_moments"
+                </p>
+                <p class="tl-card-body">
+                  The most exciting part of BSIT is that you get to build things
+                  — actual, working things. Writing your first program that
+                  runs, designing a database that stores real data, or
+                  configuring a network that actually connects — there is a rush
+                  to it that never gets old. Every lab session feels like a
+                  puzzle, and solving it gives a satisfaction that no other
+                  academic experience has matched for me.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">Building Projects</span
+                  ><span class="tl-tag">Lab Sessions</span
+                  ><span class="tl-tag">Collaboration</span
+                  ><span class="tl-tag">Problem Solving</span>
+                </div>
+              </div>
+            </div>
+            <div class="tl-row">
+              <div class="tl-card tl-left reveal from-up">
+                <div class="tl-meta">
+                  <span class="tl-meta-icon">&#9632;</span
+                  ><span>PERSPECTIVE_03 &nbsp;/&nbsp; DIFFICULTY_SCAN</span>
+                </div>
+                <h3 class="tl-card-title">The <span>Hard</span> Parts</h3>
+                <p class="tl-card-sub">
+                  &gt; breach_scan --target "student_struggles"
+                </p>
+                <p class="tl-card-body">
+                  Being a BSIT student is not easy. The workload is relentless —
+                  coding assignments, research papers, laboratory outputs, and
+                  technical exams often collide at the same time. There are
+                  nights where the screen blurs and the logic simply refuses to
+                  click. But these hard moments are exactly what builds
+                  resilience.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">Heavy Workload</span
+                  ><span class="tl-tag">Complex Concepts</span
+                  ><span class="tl-tag">Time Pressure</span
+                  ><span class="tl-tag">Resilience</span>
+                </div>
+              </div>
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <span class="tl-index">03</span>
+              </div>
+              <div class="tl-empty" style="grid-column: 3"></div>
+            </div>
+            <div class="tl-row">
+              <div class="tl-empty" style="grid-column: 1"></div>
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <span class="tl-index">04</span>
+              </div>
+              <div class="tl-card tl-right reveal from-up">
+                <div class="tl-meta">
+                  <span class="tl-meta-icon">&#9632;</span
+                  ><span>PERSPECTIVE_04 &nbsp;/&nbsp; FUTURE_FORECAST</span>
+                </div>
+                <h3 class="tl-card-title">The <span>Future</span> of BSIT</h3>
+                <p class="tl-card-sub">
+                  &gt; forecast --scope "academic + industry"
+                </p>
+                <p class="tl-card-body">
+                  The future of BSIT is luminous. Academically, I see the
+                  program evolving to integrate AI, cybersecurity, and cloud
+                  computing more deeply into its core subjects. In the tech
+                  industry, BSIT graduates are already filling critical roles in
+                  software engineering, systems administration, and digital
+                  transformation. BSIT is not just a degree — it is a launchpad
+                  into a future that is being written in code right now.
+                </p>
+                <div class="tl-tags">
+                  <span class="tl-tag">AI Integration</span
+                  ><span class="tl-tag">Cybersecurity</span
+                  ><span class="tl-tag">Cloud Computing</span
+                  ><span class="tl-tag">Industry Demand</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="section-panel">
+        <section class="contact-section">
+          <div class="contact-header reveal from-up">
+            <h2>Contact <span>Me</span></h2>
+            <p>Got a question? Send me a message and I'll get back to you.</p>
+          </div>
+          <div class="contact-container">
+            <div class="contact-card reveal from-left">
+              <h3>Get in Touch</h3>
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Your Email" />
+              <textarea placeholder="Your Message"></textarea>
+              <button class="contact-btn">Send Message</button>
+              <div class="card-inner" style="margin-top: 0.8rem">
+                <div class="contact-socials">
+                  <p>Connect With Me</p>
+                  <div class="social-grid">
+                    <div>LinkedIn</div>
+                    <div>Instagram</div>
+                    <div>Github</div>
+                    <div>Tiktok</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-card reveal from-right">
+              <h3>Comments</h3>
+              <input type="text" id="nameInput" placeholder="Enter your name" />
+              <textarea
+                id="messageInput"
+                placeholder="Write your message..."
+              ></textarea>
+              <button class="contact-btn" onclick="postComment()">
+                Post Comment
+              </button>
+              <div id="commentSection" style="margin-top: 0.5rem">
+                <div class="comment">
+                  <strong>Mr.Guide</strong>
+                  <p>
+                    Try the temporary comment section — enter your name, write a
+                    message, and click Post Comment. Nice site!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-topline"></div>
+      <div class="footer-main">
+        <div class="footer-brand" data-anim="up">
+          <a href="#tamski" class="footer-logo">
+            <img
+              src="../images/logo.png"
+              alt="Portfolio Logo"
+              class="footer-logo-img"
+            />
+            <span class="footer-logo-text"
+              ><span class="ft-slash">//</span>TAM<span class="ft-ski"
+                >SKI</span
+              ></span
+            >
+          </a>
+          <p class="footer-tagline">
+            Building innovative, functional, and user-friendly digital
+            experiences — one line of code at a time.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="social-link" title="GitHub" data-label="GitHub"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                /></svg
+            ></a>
+            <a
+              href="#"
+              class="social-link"
+              title="LinkedIn"
+              data-label="LinkedIn"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                /></svg
+            ></a>
+            <a
+              href="#"
+              class="social-link"
+              title="Instagram"
+              data-label="Instagram"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                /></svg
+            ></a>
+            <a href="#" class="social-link" title="TikTok" data-label="TikTok"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.2 8.2 0 004.79 1.53V6.82a4.85 4.85 0 01-1.02-.13z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col" data-anim="up">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <button class="footer-link" onclick="navTo('home')">Home</button>
+          <button class="footer-link" onclick="navTo('about')">About</button>
+          <button class="footer-link" onclick="navTo('experiences')">
+            Experiences
+          </button>
+          <button class="footer-link" onclick="navTo('achievements')">
+            Achievements
+          </button>
+          <button class="footer-link" onclick="navTo('opportunities')">
+            Opportunities
+          </button>
+          <button class="footer-link" onclick="navTo('struggles')">
+            Struggles
+          </button>
+          <button class="footer-link" onclick="navTo('testimonial')">
+            Testimonials
+          </button>
+          <button class="footer-link" onclick="navTo('contact')">
+            Contact Me
+          </button>
+        </div>
+        <div class="footer-col" data-anim="up">
+          <h4 class="footer-col-title">Legal Information</h4>
+          <a href="#" class="footer-link">About This Site</a>
+          <a href="#" class="footer-link">Terms &amp; Conditions</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Cookie Policy</a>
+          <a href="#" class="footer-link">Disclaimer</a>
+        </div>
+        <div class="footer-subscribe" data-anim="up">
+          <h4 class="footer-col-title">Stay Updated</h4>
+          <p class="footer-sub-desc">
+            Subscribe to receive updates on new projects, achievements, and tech
+            insights.
+          </p>
+          <div class="footer-sub-form" id="footerSubForm">
+            <input
+              class="footer-sub-input"
+              id="footerSubInput"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+            <button
+              class="footer-sub-btn"
+              onclick="footerSubscribe()"
+              title="Subscribe"
+            >
+              &#9654;
+            </button>
+          </div>
+          <div class="footer-sub-success" id="footerSubSuccess">
+            &#10003;&nbsp; Subscribed — thanks!
+          </div>
+          <p class="footer-sub-note">
+            // No spam. Unsubscribe anytime.<br />// Your data stays private.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2025 <span>Jotham Den M. Baquiran</span>. All Rights Reserved.
+        </p>
+        <div class="footer-bottom-right">
+          <div class="footer-status-dot"></div>
+          <span class="footer-status-text"
+            >SYSTEM ONLINE &nbsp;&middot;&nbsp; BUILT WITH CODE</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="../scripts/home.js"></script>
+  </body>
+</html>
